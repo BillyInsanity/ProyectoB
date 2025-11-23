@@ -1,0 +1,214 @@
+body {
+    /* 1. Imagen de Fondo */
+    background-image: url('img_login/Imagen\ de\ inicio\ de\ sesion.jpg'); /* Asegúrate de tener esta imagen en la ruta correcta */
+    background-size: cover; /* Cubre todo el área */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que se repita */
+
+    /* Configuración básica de la página */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+    min-height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+}
+
+/* Contenedor del Login (Cuadro Central) */
+.login-box {
+    /* 2. Cuadro en el Centro */
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    width: 350px; /* Ancho fijo del cuadro */
+    text-align: center;
+}
+
+/* Título */
+.login-box h2 {
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* Grupos de entrada (Label + Input) */
+.input-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+}
+
+/* Grupo de enlaces (Crear Cuenta y Olvidó Contraseña) */
+.link-group {
+    display: flex;
+    justify-content: space-between; /* Espacia los botones de link */
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.link-button {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.link-button:hover {
+    text-decoration: underline;
+}
+
+/* Grupo de botones de acción (Cerrar y Iniciar Sesión) */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Estilos generales de botones */
+.button-group a {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 38%; /* Para que cada uno ocupe casi la mitad */
+    text-decoration: none;
+}
+
+.button-group button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 48%; /* Para que cada uno ocupe casi la mitad */
+    text-decoration: none;
+    font-size: 15px; /* ajusta el tamaño del texto del boton*/
+}
+
+/* Botón Iniciar Sesión */
+.btn-login {
+    background-color: #007bff; /* Azul */
+    color: white;
+}
+
+.btn-login:hover {
+    background-color: #0056b3;
+}
+
+/* Botón Cerrar */
+.btn-cancel {
+    background-color: #dc3545; /* Rojo */
+    color: white;
+}
+
+.btn-cancel:hover {
+    background-color: #c82333;
+}
+
+/* ---------------------------------- */
+/* 🌟 ESTILOS PARA EL MODAL DE REGISTRO DE CREAR CUENTA 🌟 */
+/* ---------------------------------- */
+
+/* Fondo oscurecido que cubre toda la pantalla (Overlay) */
+.modal-overlay {
+    /* ❗ Importante: Oculto por defecto */
+    display: none; 
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65); /* Fondo semi-transparente oscuro para mejor contraste */
+    z-index: 1000; /* Asegura que esté por encima de todo */
+    justify-content: center;
+    align-items: center;
+}
+
+/* El cuadro central del formulario de registro */
+.modal-content {
+    background-color: #fff;
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.55);
+    width: 420px; /* Un poco más ancho que el login */
+    max-width: calc(100% - 32px);
+    text-align: center;
+    max-height: 85vh;
+    overflow: auto; /* Soporta pantallas pequeñas */
+    outline: none;
+}
+
+.modal-content h3 {
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* Estilos de botones dentro del modal */
+.modal-button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+/* Focus visible inside modal content for keyboard users */
+.modal-content:focus {
+    box-shadow: 0 0 0 4px rgba(13,110,253,0.18);
+}
+
+.modal-button-group button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 48%; 
+    border: 1px solid transparent;
+}
+
+.btn-primary {
+    background-color: #007bff; /* Azul */
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #6c757d; /* Gris */
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* stilo de los input para los campos del formulario en la validacion*/
+/* Estilo para el campo de entrada cuando es inválido */
+.input-error {
+    border: 2px solid red !important;
+}
+
+/* Estilo para el mensaje de error */
+.error-message {
+    color: red;
+    font-size: 0.85em;
+    margin-top: 5px;
+    display: block; /* Oculto por defecto none */
+    height: 1.2em;/*para evitar saltos al aparecer el texto*/
+}

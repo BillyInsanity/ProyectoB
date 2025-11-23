@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paquetes</title>
+    <!--styles del encabezado-->
+    <link rel="stylesheet" href="index_styles.css">
+    <!--styles del contenido-->
+    <link rel="stylesheet" href="paquetes_styles.css">
+    <!--styles de la ventana modal-->
+    <link rel="stylesheet" href="ventana_modal_styles.css">
+    <!--libreria de font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <!--encabezado-->
+    <header class="main-header">
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="index.html" class="logo-link">
+                <img src="img_logo empresa/logotipo de la empresa Crisalis.jpg" alt="Logo de la empresa Crisalis.com" class="logo">
+            </a>
+        </div>
+        <!--barra de busqueda-->
+        <div class="navbar-center">
+            <form action="/search" method="get">
+                <!--este es el boton de la barra de busqueda pon el nombre del name como biene hai-->
+                <input type="text" name="busqueda" placeholder="Buscar Hoteles..." class="search-input">
+                <!-- este es un boton que ayuda a la barra de busqueda en buscar el objeto es que tiene la imagen de una lupa-->
+                <button type="submit" name="iconbusqueda" class="search-button"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+        <!--botones de ajustes y inicio de secion-->
+        <div class="navbar-right">
+            <!--este es el boton de ajustes-->
+            <button name="ajuste" class="settings-button"><i class="fas fa-cog"></i></button>
+            <!--este es el boton de iniciar sesion-->
+            <button href="login.html" name="sesion" class="login-button"><i class="fas fa-user"></i></button>
+        </div>
+    </nav>
+    </header>
+
+    <!--titulo del paquete con el boton de reservacion-->
+    <header class="hero-image-paquetedos">
+        <div class="hero-text">
+            <h1>Hotel La Palmera Dorada</h1>
+            <p>Reserve el Paquete Aquí.</p>
+            <button id="abrirModalBtn">Reservar Paquete</button>
+        </div>
+    </header>
+
+    <!--Ventana Modal de reservacion-->    
+    <div id="miModal" class="modal">
+
+      <div class="modal-content">
+        <h2>Datos de Reservación</h2>
+        <hr>
+
+        <label for="nombreHuesped">Nombre del Huésped:</label>
+        <input type="text" id="nombreHuesped" name="nombreHuesped" required>
+
+        <label for="integrantes">Tipo de Reservación / Integrantes:</label>
+        <select id="integrantes" name="integrantes" required>
+            <option value="" disabled selected>Selecciona una opción</option>
+            <option value="1-6">Reservación Familiar (1 a 6 integrantes)</option>
+            <option value="1-12">Reservación Grupal (1 a 12 integrantes)</option>
+            <option value="2">Reservación de Pareja (2 integrantes)</option>
+            <option value="otro">Otro (Especificar cantidad)</option>
+        </select>
+
+        <div id="otroIntegrantesDiv" class="input-hidden">
+            <label for="cantidadOtro">Cantidad de Integrantes:</label>
+            <input type="number" id="cantidadOtro" min="1" placeholder="Ej: 5 o 15">
+        </div>
+
+        <label for="fechaReservacion">Fecha de Reservación:</label>
+        <input type="date" id="fechaReservacion" name="fechaReservacion" required>
+
+        <div class="modal-footer">
+            <button id="cancelarBtn">Cancelar</button>
+            <button id="reservarAhoraBtn">Reservar Ahora</button>
+        </div>
+
+      </div>
+    </div>
+
+    <!--contenedores de informacion del hotel-->
+    <main class="container">
+        <div class="left-box">
+            <h2>Informacion del Hotel</h2>
+            <p>
+               Dirección: Av. México No.80, Peñón de los Baños, Venustiano Carranza, 15520 Ciudad de Baja California
+            </p>
+            <img src="img_datos del hotel/Imagen mapa h2.jpg" alt="Imagen del mapa">
+        </div>
+        
+        <div class="right-box">
+            <h2>Detalles del paquete</h2>
+            <img src="img_paquetes/Imagen1 h2 cama.jpg" alt="Imagen de recamara">
+            <img src="img_paquetes/Imagen2 h2 pateo.jpg" alt="Imagen de pateo">
+            <img src="img_paquetes/Imagen3 h2 vista.jpg" alt="Imagen de vista">
+        </div>
+    </main>
+
+    <!--contenedores de paquetes y hoteles-->
+    <h1 class="centered-heading">Hoteles</h1>
+    <main>
+    <div class="cards-container">
+        <div class="card">
+            <img src="img_datos del hotel/imagenhotel_dos.jpg" alt="Descripción de la imagen 1" class="card-image">
+            <div class="card-content">
+                <h3 class="card-title">La Montaña Mágica</h3>
+                <p class="card-text">Calificacion:⭐⭐⭐⭐</p>
+                <a href="hotel_uno.html" class="card-button">
+                <label>Ver más</label>
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="img_datos del hotel/imagenhotel_tres.jpg" alt="Descripción de la imagen 2" class="card-image">
+            <div class="card-content">
+                <h3 class="card-title">Hotel La Palmera Dorada</h3>
+                <p class="card-text">Calificacion:⭐⭐⭐⭐</p>
+                <a href="hotel_dos.html" class="card-button">
+                <label>Ver más</label>
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="img_datos del hotel/imagenhotel_cuatro.jpg" alt="Descripción de la imagen 3" class="card-image">
+            <div class="card-content">
+                <h3 class="card-title">El Paraíso Perdido</h3>
+                <p class="card-text">Calificacion:⭐⭐⭐⭐⭐</p>
+                <a href="hotel_tres.html" class="card-button">
+                <label>Ver más</label>
+                </a>
+            </div>
+        </div>
+    </div>
+    </main>
+    <!--contenedor de los paquetes-->
+    <h1 class="centered-heading">Paquetes</h1>
+    <main>
+    <div class="cards-container">
+        <div class="card">
+            <img src="img_datos del hotel/Imagenpaquete_uno.jpg" alt="Descripción de la imagen 1" class="card-image">
+            <div class="card-content">
+                <h3 class="card-title">La Montaña Mágica</h3>
+                <p class="card-text">Calificacion:⭐⭐⭐⭐</p>
+                <a href="paquete_uno.html" class="card-button">
+                <label>Ver más</label>
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="img_datos del hotel/Imagenpaquete_dos.jpg" alt="Descripción de la imagen 2" class="card-image">
+            <div class="card-content">
+                <h3 class="card-title">Hotel La Palmera Dorada</h3>
+                <p class="card-text">Calificacion:⭐⭐⭐⭐</p>
+                <a href="paquete_dos.html" class="card-button">
+                <label>Ver más</label>
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="img_datos del hotel/imgenpaquete_tres.jpg" alt="Descripción de la imagen 3" class="card-image">
+            <div class="card-content">
+                <h3 class="card-title">El Paraíso Perdido</h3>
+                <p class="card-text">Calificacion:⭐⭐⭐⭐⭐</p>
+                <a href="paquete_tres.html" class="card-button">
+                <label>Ver más</label>
+                </a>
+            </div>
+        </div>
+    </div>
+    </main>
+
+    <!--manda a llamar al archivo que contiene las funciones de la ventana modal-->
+    <script src="reservacion.js"></script>
+    <script>inicializarReservacion("Hotel La Palmera Dorada (Paquete)");</script>
+</body>
+</html>

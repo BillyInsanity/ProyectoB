@@ -1,0 +1,58 @@
+/* 1. Estilos del Modal (Ventana Emergente) */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Fijo en la pantalla */
+    z-index: 1; /* Encima de todo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permite scroll si el contenido es muy grande */
+    background-color: rgba(0,0,0,0.4); /* Fondo negro semitransparente */
+}
+
+/* 2. Contenido del Modal */
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; /* Centrado verticalmente y ajustado al ancho */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Ancho del contenido */
+    max-width: 500px; /* Máximo para que no sea muy grande en pantallas amplias */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+/* 3. Estilos de los inputs y select */
+/*aqui darle modal-content para que no arfecto a los label, input, select, button de los otros styles*/
+.modal-content label, 
+.modal-content input,
+.modal-content select,
+.modal-content button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+}
+
+/* 4. Contenedor de botones para que estén en la misma línea */
+.modal-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.modal-footer button {
+    width: 48%; /* Para que quepan dos en línea */
+    padding: 10px 20px; /*asegura un padding base*/
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+/* Clase para ocultar el input de "otro" */
+.input-hidden {
+    display: none; /* Oculta la casilla de "otro" por defecto */
+}

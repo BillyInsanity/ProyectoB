@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crisalis.com</title>
+    <!--stilo del diseño del index-->
+    <link rel="stylesheet" href="index_styles.css">
+    <!--libreria de font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <!--encabezado-->
+    <header class="main-header">
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="#" class="logo-link">
+                <img src="img_logo empresa/logotipo de la empresa Crisalis.jpg" alt="Logo de la empresa Crisalis.com" class="logo">
+            </a>
+        </div>
+        <!--barra de busqueda-->
+        <div class="navbar-center">
+            <form action="/search" method="get">
+                <!--este es el boton de la barra de busqueda pon el nombre del name como biene hai-->
+                <input type="text" name="busqueda" placeholder="Buscar Hoteles..." class="search-input">
+                <!-- este es un boton que ayuda a la barra de busqueda en buscar el objeto es que tiene la imagen de una lupa-->
+                <button type="submit" name="iconbusqueda" class="search-button"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+        <!--botones de ajustes y inicio de secion-->
+        <div class="navbar-right">
+            <!--este es el boton de ajustes-->
+            <button name="ajuste" class="settings-button"><i class="fas fa-cog"></i></button>
+            <!--este es el boton de iniciar sesion-->
+            <a href="login.html" name="sesion" class="login-button"><i class="fas fa-user"></i></a>
+        </div>
+    </nav>
+    </header>
+
+    <!--contenedor de los hoteles-->
+    <h1 class="centered-heading">Hoteles</h1>
+    <main>
+    <div class="cards-container">
+        <div class="card">
+            <img src="img_datos del hotel/imagenhotel_dos.jpg" alt="Descripción de la imagen 1" class="card-image">
+            <div class="card-content">
+                <h3 class="card-title">La Montaña Mágica</h3>
+                <p class="card-text">Calificacion:⭐⭐⭐⭐</p>
+                <a href="hotel_uno.html" class="card-button">
+                <label>Ver más</label>
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="img_datos del hotel/imagenhotel_tres.jpg" alt="Descripción de la imagen 2" class="card-image">
+            <div class="card-content">
+                <h3 class="card-title">Hotel La Palmera Dorada</h3>
+                <p class="card-text">Calificacion:⭐⭐⭐⭐</p>
+                <a href="hotel_dos.html" class="card-button">
+                <label>Ver más</label>
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="img_datos del hotel/imagenhotel_cuatro.jpg" alt="Descripción de la imagen 3" class="card-image">
+            <div class="card-content">
+                <h3 class="card-title">El Paraíso Perdido</h3>
+                <p class="card-text">Calificacion:⭐⭐⭐⭐⭐</p>
+                <a href="hotel_tres.html" class="card-button">
+                <label>Ver más</label>
+                </a>
+            </div>
+        </div>
+    </div>
+    </main>
+    <!--contenedor de los paquetes-->
+    <h1 class="centered-heading">Paquetes</h1>
+    <main>
+    <div class="cards-container">
+        <div class="card">
+            <img src="img_datos del hotel/Imagenpaquete_uno.jpg" alt="Descripción de la imagen 1" class="card-image">
+            <div class="card-content">
+                <h3 class="card-title">La Montaña Mágica</h3>
+                <p class="card-text">Calificacion:⭐⭐⭐⭐</p>
+                <a href="paquete_uno.html" class="card-button">
+                <label>Ver más</label>
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="img_datos del hotel/Imagenpaquete_dos.jpg" alt="Descripción de la imagen 2" class="card-image">
+            <div class="card-content">
+                <h3 class="card-title">Hotel La Palmera Dorada</h3>
+                <p class="card-text">Calificacion:⭐⭐⭐⭐</p>
+                <a href="paquete_dos.html" class="card-button">
+                <label>Ver más</label>
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="img_datos del hotel/imgenpaquete_tres.jpg" alt="Descripción de la imagen 3" class="card-image">
+            <div class="card-content">
+                <h3 class="card-title">El Paraíso Perdido</h3>
+                <p class="card-text">Calificacion:⭐⭐⭐⭐⭐</p>
+                <a href="paquete_tres.html" class="card-button">
+                <label>Ver más</label>
+                </a>
+            </div>
+        </div>
+    </div>
+    </main>
+</body>
+</html>
